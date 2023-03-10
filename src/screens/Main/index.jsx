@@ -18,7 +18,7 @@ export default function Main() {
 
   const searchMovies = async () => {
     const response = await axios
-      .get(`http://www.omdbapi.com/?t=${searchText}&plot=full&apikey=f5b3bed5`)
+      .get(`https://www.omdbapi.com/?t=${searchText}&plot=full&apikey=f5b3bed5`)
       .catch((err) => {
         showErrorMessage(err.message);
       });
