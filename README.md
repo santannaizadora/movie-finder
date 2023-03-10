@@ -1,6 +1,6 @@
 # Movie Finder
 
-React application consumming OMDb API
+React application consumming OMDb API <br/>
 Deploy: https://movie-finder-zeta.vercel.app/
 
 ## Desktop
