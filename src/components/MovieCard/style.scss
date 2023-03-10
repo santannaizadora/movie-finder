@@ -44,3 +44,22 @@ img {
   color: #fff;
   cursor: pointer;
 }
+
+@media screen and (max-width: 770px) {
+  .card-style {
+    width: 100%;
+  }
+
+  .card-content {
+    flex-direction: column-reverse !important;
+  }
+
+  .movie-info {
+    margin-right: 0;
+  }
+
+  img {
+    width: 100%;
+    padding-bottom: 1rem;
+  }
+}

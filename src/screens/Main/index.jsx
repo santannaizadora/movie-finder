@@ -1,6 +1,8 @@
-import { Input, Button, Text, Toast } from "@ui5/webcomponents-react";
+import { Input, Button, Text, Toast, FlexBox } from "@ui5/webcomponents-react";
 import React, { useState, useRef } from "react";
 import MovieCard from "../../components/MovieCard";
+import Header from "../../components/Header";
+import Footer from "../../components/Footer";
 import "./style.scss";
 import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
@@ -37,29 +39,36 @@ export default function Main() {
   };
 
   return (
-    <div className="container">
-      <Toast ref={toast} placement="TopEnd">
-        Error: {error}
-      </Toast>
-      <Text className="title">Movie Finder</Text>
-      <Text className="text">
-        Search the movie you want to watch and find the plot, actors and review.
-      </Text>
-      <div className="search-container">
-        <Input
-          className="input"
-          placeholder="Search for a movie"
-          value={searchText}
-          onChange={(e) => setSearchText(e.target.value)}
-        />
-        <Button className="button" onClick={searchMovies}>
-          Search
-        </Button>
-        <Button className="button" onClick={clearMovies}>
-          Reset
-        </Button>
-      </div>
-      {movie && <MovieCard movie={movie} />}
-    </div>
+    <>
+      <Header />
+      <FlexBox className="container">
+        <Toast ref={toast} placement="TopEnd">
+          Error: {error}
+        </Toast>
+        <Text className="title">Movie Finder</Text>
+        <Text className="text">
+          Search the movie you want to watch and find the plot, actors and
+          review.
+        </Text>
+        <FlexBox className="search-container">
+          <Input
+            className="input"
+            placeholder="Search for a movie"
+            value={searchText}
+            onChange={(e) => setSearchText(e.target.value)}
+          />
+          <FlexBox>
+            <Button className="button" onClick={searchMovies}>
+              Search
+            </Button>
+            <Button className="button" onClick={clearMovies}>
+              Reset
+            </Button>
+          </FlexBox>
+        </FlexBox>
+        {movie && <MovieCard movie={movie} />}
+      </FlexBox>
+      <Footer />
+    </>
   );
 }

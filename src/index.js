@@ -6,6 +6,7 @@ import "./index.scss";
 import reportWebVitals from "./reportWebVitals";
 import { Provider } from "react-redux";
 import store from "./redux/store";
+import "@ui5/webcomponents-icons/dist/AllIcons.js";
 
 const container = document.getElementById("root");
 const root = createRoot(container);
