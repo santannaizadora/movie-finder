@@ -1,0 +1,46 @@
+.card-style {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  margin-bottom: 10px;
+  padding: 10px;
+  width: 50rem;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.movie-info {
+  display: flex;
+  flex-direction: column;
+  margin-right: 1.5rem;
+
+  :nth-child(n){
+    margin-bottom: 1rem;
+  }
+}
+
+img {
+  width: 15rem;
+  height: auto;
+  border-radius: 10px;
+}
+
+::part(title) {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.favorite-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 7rem;
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+}
