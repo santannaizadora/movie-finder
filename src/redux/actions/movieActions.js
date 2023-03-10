@@ -10,6 +10,7 @@ export const getMovies = (movies) => {
 export const clearMovies = () => {
   return {
     type: ActionTypes.CLEAR_MOVIES,
+    payload: null,
   };
 };
 
