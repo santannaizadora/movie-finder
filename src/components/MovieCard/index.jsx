@@ -7,7 +7,7 @@ export default function MovieCard(props) {
   return (
     <Card
       className="card-style"
-      header={<CardHeader titleText={Title} className="movie-title" />}
+      header={<CardHeader titleText={Title}/>}
     >
       <FlexBox className="card-content">
         <div className="movie-info">

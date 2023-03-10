@@ -62,4 +62,8 @@ img {
     width: 100%;
     padding-bottom: 1rem;
   }
+
+  ::part(title) {
+    font-size: 1.5rem;
+  }
 }
